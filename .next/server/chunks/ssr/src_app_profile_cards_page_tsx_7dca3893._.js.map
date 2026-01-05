@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/profile/cards/page.tsx"],"sourcesContent":["'use client';\n\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\n\nexport default function SavedCardsPage() {\n    return (\n        <Card>\n            <CardHeader>\n                <CardTitle>Saved Cards</CardTitle>\n            </CardHeader>\n            <CardContent>\n                <p className=\"text-muted-foreground\">You have no saved cards.</p>\n                 {/* Placeholder for adding Cards */}\n            </CardContent>\n        </Card>\n    )\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACpB,qBACI,8OAAC,wIAAI;;0BACD,8OAAC,8IAAU;0BACP,cAAA,8OAAC,6IAAS;8BAAC;;;;;;;;;;;0BAEf,8OAAC,+IAAW;0BACR,cAAA,8OAAC;oBAAE,WAAU;8BAAwB;;;;;;;;;;;;;;;;;AAKrD","debugId":null}}]
+}

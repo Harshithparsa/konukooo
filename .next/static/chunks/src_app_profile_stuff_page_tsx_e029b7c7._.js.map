@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/profile/stuff/page.tsx"],"sourcesContent":["'use client';\n\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\n\nexport default function MyStuffPage() {\n    return (\n        <Card>\n            <CardHeader>\n                <CardTitle>My Stuff</CardTitle>\n            </CardHeader>\n            <CardContent>\n                <p className=\"text-muted-foreground\">This section will contain your reviews, ratings, and other content.</p>\n            </CardContent>\n        </Card>\n    )\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACpB,qBACI,6LAAC,2IAAI;;0BACD,6LAAC,iJAAU;0BACP,cAAA,6LAAC,gJAAS;8BAAC;;;;;;;;;;;0BAEf,6LAAC,kJAAW;0BACR,cAAA,6LAAC;oBAAE,WAAU;8BAAwB;;;;;;;;;;;;;;;;;AAIrD;KAXwB","debugId":null}}]
+}

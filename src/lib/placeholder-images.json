@@ -1,0 +1,466 @@
+{
+  "placeholderImages": [
+    {
+      "id": "prod_1",
+      "description": "A stylish leather wallet.",
+      "imageUrl": "https://images.unsplash.com/photo-1612023395494-1c4050b68647?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsZWF0aGVyJTIwd2FsbGV0fGVufDB8fHx8MTc2NzUxMTY2MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather wallet"
+    },
+    {
+      "id": "prod_2",
+      "description": "A modern wireless headphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1491927570842-0261e477d937?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aXJlbGVzcyUyMGhlYWRwaG9uZXN8ZW58MHx8fHwxNzY3NDQ2NzA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless headphones"
+    },
+    {
+      "id": "prod_3",
+      "description": "A classic stainless steel watch.",
+      "imageUrl": "https://images.unsplash.com/photo-1677086522121-f6702cdbf07b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGVlbCUyMHdhdGNofGVufDB8fHx8MTc2NzQzMTg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "steel watch"
+    },
+    {
+      "id": "prod_4",
+      "description": "A comfortable cotton t-shirt.",
+      "imageUrl": "https://images.unsplash.com/photo-1759572095384-1a7e646d0d4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb3R0b24lMjB0LXNoaXJ0fGVufDB8fHx8MTc2NzQzMTg2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cotton t-shirt"
+    },
+    {
+      "id": "prod_5",
+      "description": "A durable hiking backpack.",
+      "imageUrl": "https://images.unsplash.com/photo-1602845860431-35374f24f48d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoaWtpbmclMjBiYWNrcGFja3xlbnwwfHx8fDE3Njc0NTA0MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hiking backpack"
+    },
+    {
+      "id": "prod_6",
+      "description": "A sleek ceramic coffee mug.",
+      "imageUrl": "https://images.unsplash.com/photo-1542556398-95fb5b9f9b48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29mZmVlJTIwbXVnfGVufDB8fHx8MTc2NzQyODM3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee mug"
+    },
+    {
+      "id": "prod_7",
+      "description": "A pair of trendy sunglasses.",
+      "imageUrl": "https://images.unsplash.com/photo-1608539733292-190446b22b83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdW5nbGFzc2VzfGVufDB8fHx8MTc2NzQ1Mzg1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sunglasses"
+    },
+    {
+      "id": "prod_8",
+      "description": "A professional yoga mat.",
+      "imageUrl": "https://images.unsplash.com/photo-1637157216470-d92cd2edb2e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx5b2dhJTIwbWF0fGVufDB8fHx8MTc2NzQ4NTgyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga mat"
+    },
+    {
+      "id": "prod_9",
+      "description": "A smart water bottle.",
+      "imageUrl": "https://images.unsplash.com/photo-1530711654140-23ef9ad45094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3YXRlciUyMGJvdHRsZXxlbnwwfHx8fDE3Njc0NzA5NTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "water bottle"
+    },
+    {
+      "id": "prod_10",
+      "description": "A minimalist desk lamp.",
+      "imageUrl": "https://images.unsplash.com/photo-1601642964568-1917224f4e4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkZXNrJTIwbGFtcHxlbnwwfHx8fDE3Njc0MzI0OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "desk lamp"
+    },
+    {
+      "id": "prod_11",
+      "description": "A classic novel.",
+      "imageUrl": "https://images.unsplash.com/photo-1656310415047-2677eb228341?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjbGFzc2ljJTIwYm9va3xlbnwwfHx8fDE3Njc0NTczNDJ8MA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "classic book"
+    },
+    {
+      "id": "prod_12",
+      "description": "A set of colorful building blocks.",
+      "imageUrl": "https://images.unsplash.com/photo-1539477192933-1a7dde04aa77?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidWlsZGluZyUyMGJsb2Nrc3xlbnwwfHx8fDE3Njc1MjYwNzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "building blocks"
+    },
+    {
+      "id": "prod_13",
+      "description": "An organic face serum.",
+      "imageUrl": "https://images.unsplash.com/photo-1672062519629-abe610383152?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxmYWNlJTIwc2VydW18ZW58MHx8fHwxNzY3NTI2MDc4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "face serum"
+    },
+    {
+      "id": "prod_14",
+      "description": "A bag of gourmet coffee beans.",
+      "imageUrl": "https://images.unsplash.com/photo-1692296113053-76f240e5ce33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29mZmVlJTIwYmVhbnN8ZW58MHx8fHwxNzY3NDY4ODkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee beans"
+    },
+    {
+      "id": "prod_15",
+      "description": "A modern smartphone with a sleek design.",
+      "imageUrl": "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2JpbGUlMjBwaG9uZXxlbnwwfHx8fDE3Njc1MTU0NzV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile phone"
+    },
+    {
+      "id": "prod_16",
+      "description": "A compact smart speaker for any room.",
+      "imageUrl": "https://images.unsplash.com/photo-1640826808046-6d4d4faa30c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzbWFydCUyMHNwZWFrZXJ8ZW58MHx8fHwxNzY3NDU3OTQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart speaker"
+    },
+    {
+      "id": "prod_17",
+      "description": "A classic denim jacket.",
+      "imageUrl": "https://images.unsplash.com/photo-1608147152875-b0eb0c53d491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkZW5pbSUyMGphY2tldHxlbnwwfHx8fDE3Njc0Mjc3NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "denim jacket"
+    },
+    {
+      "id": "prod_18",
+      "description": "A stainless steel electric kettle.",
+      "imageUrl": "https://images.unsplash.com/photo-1748408082799-94daff13e792?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxlbGVjdHJpYyUyMGtldHRsZXxlbnwwfHx8fDE3Njc0NzU4OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "electric kettle"
+    },
+    {
+      "id": "prod_19",
+      "description": "A comfortable memory foam pillow.",
+      "imageUrl": "https://images.unsplash.com/photo-1766393032172-0ee46e35b92d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtZW1vcnklMjBwaWxsb3d8ZW58MHx8fHwxNzY3NTI3MzE3fDA&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "memory pillow"
+    },
+    {
+      "id": "prod_20",
+      "description": "A high-performance gaming mouse.",
+      "imageUrl": "https://images.unsplash.com/photo-1616296425622-4560a2ad83de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYW1pbmclMjBtb3VzZXxlbnwwfHx8fDE3Njc1MTk2ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming mouse"
+    },
+    {
+      "id": "prod_21",
+      "description": "A pair of true wireless earbuds.",
+      "imageUrl": "https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fHx8MTc2NzQ2OTM0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless earbuds"
+    },
+    {
+      "id": "prod_22",
+      "description": "A professional DSLR camera.",
+      "imageUrl": "https://images.unsplash.com/photo-1696713219412-0b08a5afe31c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxEU0xSJTIwY2FtZXJhfGVufDB8fHx8MTc2NzQ3MDg3Nnww&ixlibrb-4.1.0&q=80&w=1080",
+      "imageHint": "DSLR camera"
+    },
+    {
+      "id": "prod_23",
+      "description": "Lightweight running shoes.",
+      "imageUrl": "https://images.unsplash.com/photo-1562183241-b937e95585b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxydW5uaW5nJTIwc2hvZXN8ZW58MHx8fHwxNzY3NDI5MTM2fDA&ixlib-rb-4.1.0&q=80&w=1080",
+      "imageHint": "running shoes"
+    },
+    {
+      "id": "prod_24",
+      "description": "A HEPA filter air purifier.",
+      "imageUrl": "https://images.unsplash.com/photo-1652352529254-5106f4c8e03c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhaXIlMjBwdXJpZmllcnxlbnwwfHx8fDE3Njc1MjY5OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "air purifier"
+    },
+    {
+      "id": "prod_25",
+      "description": "An affordable smartphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1634403665481-74948d815f03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbWFydHBob25lfGVufDB8fHx8MTc2NzQzNTgxMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smartphone"
+    },
+    {
+      "id": "prod_26",
+      "description": "A gentle herbal shampoo.",
+      "imageUrl": "https://images.unsplash.com/photo-1672062519474-1a4407fdf387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxoZXJiYWwlMjBzaGFtcG9vfGVufDB8fHx8MTc2NzUyNjk5Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "herbal shampoo"
+    },
+    {
+      "id": "prod_27",
+      "description": "An intelligent robot vacuum.",
+      "imageUrl": "https://images.unsplash.com/photo-1558317374-067fb5f30001?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMHZhY3V1bXxlbnwwfHx8fDE3Njc0NDIyNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot vacuum"
+    },
+    {
+      "id": "prod_28",
+      "description": "A powerful tablet for work and play.",
+      "imageUrl": "https://images.unsplash.com/flagged/photo-1574507926668-26e97fb1041f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx0YWJsZXQlMjBwcm98ZW58MHx8fHwxNzY3NTI2OTk2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tablet pro"
+    },
+    {
+      "id": "prod_29",
+      "description": "A stylish leather handbag.",
+      "imageUrl": "https://images.unsplash.com/photo-1598099947145-e85739e7ca28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsZWF0aGVyJTIwaGFuZGJhZ3xlbnwwfHx8fDE3Njc1MjA4OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather handbag"
+    },
+    {
+      "id": "prod_30",
+      "description": "A 55-inch 4K Smart TV.",
+      "imageUrl": "https://images.unsplash.com/photo-1601944179066-29786cb9d32a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzbWFydCUyMHR2fGVufDB8fHx8MTc2NzQ1MzkwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart tv"
+    },
+    {
+      "id": "prod_F11",
+      "description": "A luxurious silk tie for formal occasions.",
+      "imageUrl": "https://images.unsplash.com/photo-1617238749996-ab4c0f9fba57?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaWxrJTIwdGllfGVufDB8fHx8MTc2NzUyOTk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silk tie"
+    },
+    {
+      "id": "prod_F12",
+      "description": "A breathable linen shirt, perfect for summer.",
+      "imageUrl": "https://images.unsplash.com/photo-1713881842156-3d9ef36418cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaW5lbiUyMHNoaXJ0fGVufDB8fHx8MTc2NzQ1NTY4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "linen shirt"
+    },
+    {
+      "id": "prod_F13",
+      "description": "A compact and trendy crossbody bag for daily use.",
+      "imageUrl": "https://images.unsplash.com/photo-1709899504137-575171b3258d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjcm9zc2JvZHklMjBiYWd8ZW58MHx8fHwxNzY3NDY5MDM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "crossbody bag"
+    },
+    {
+      "id": "prod_E10",
+      "description": "A sleek fitness tracker to monitor your daily activity and sleep.",
+      "imageUrl": "https://images.unsplash.com/photo-1561212942-0d77ee345b35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxmaXRuZXNzJTIwdHJhY2tlcnxlbnwwfHx8fDE3Njc1MjkxNDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fitness tracker"
+    },
+    {
+      "id": "prod_E11",
+      "description": "A multiport USB-C hub with HDMI, USB 3.0, and card reader slots.",
+      "imageUrl": "https://images.unsplash.com/photo-1760462787743-eeb9a211769d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1c2ItYyUyMGh1YnxlbnwwfHx8fDE3Njc1Mjk5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "usb-c hub"
+    },
+    {
+      "id": "prod_E12",
+      "description": "An ergonomic wireless mouse for comfortable navigation.",
+      "imageUrl": "https://images.unsplash.com/photo-1631749352438-7d576312185d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aXJlbGVzcyUyMG1vdXNlfGVufDB8fHx8MTc2NzQ4NDkyNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless mouse"
+    },
+    {
+      "id": "prod_E13",
+      "description": "A sturdy and adjustable tripod for cameras and smartphones.",
+      "imageUrl": "https://images.unsplash.com/photo-1762592818526-bed91d92a655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjYW1lcmElMjB0cmlwb2R8ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "camera tripod"
+    },
+    {
+      "id": "prod_E14",
+      "description": "A smart plug to control any appliance with your voice or phone.",
+      "imageUrl": "https://images.unsplash.com/photo-1745393404775-ae350c1677ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzbWFydCUyMHBsdWd8ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart plug"
+    },
+    {
+      "id": "prod_H14",
+      "description": "A cozy and soft throw blanket for your couch or bed.",
+      "imageUrl": "https://images.unsplash.com/photo-1674475761224-fec1d3263fbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0aHJvdyUyMGJsYW5rZXR8ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "throw blanket"
+    },
+    {
+      "id": "prod_H15",
+      "description": "A set of 7 assorted picture frames for a gallery wall.",
+      "imageUrl": "https://images.unsplash.com/photo-1452457005517-a0dd81caca2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaWN0dXJlJTIwZnJhbWVzfGVufDB8fHx8MTc2NzUyOTk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "picture frames"
+    },
+    {
+      "id": "prod_H16",
+      "description": "A 12-piece kitchen knife set with a wooden block.",
+      "imageUrl": "https://images.unsplash.com/photo-1760594308373-3e9b009aeae8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxrbmlmZSUyMHNldHxlbnwwfHx8fDE3Njc1Mjk5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "knife set"
+    },
+    {
+      "id": "prod_H17",
+      "description": "A 4-tier metal shoe rack to keep your footwear organized.",
+      "imageUrl": "https://images.unsplash.com/photo-1501127122-f385ca6ddd9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaG9lJTIwcmFja3xlbnwwfHx8fDE3Njc1Mjk5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "shoe rack"
+    },
+    {
+      "id": "prod_M13",
+      "description": "A precision stylus pen for tablets and touch screen devices.",
+      "imageUrl": "https://images.unsplash.com/photo-1643468986893-e5443b90fee8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdHlsdXMlMjBwZW58ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stylus pen"
+    },
+    {
+      "id": "prod_M14",
+      "description": "A protective and stylish case for your smartphone.",
+      "imageUrl": "https://images.unsplash.com/photo-1623393937972-4b3102ba8c23?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwaG9uZSUyMGNhc2V8ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "phone case"
+    },
+    {
+      "id": "prod_M15",
+      "description": "A tempered glass screen protector to prevent scratches and cracks.",
+      "imageUrl": "https://images.unsplash.com/photo-1518241559919-98374198e7f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzY3JlZW4lMjBwcm90ZWN0b3J8ZW58MHx8fHwxNzY3NDM3NzIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "screen protector"
+    },
+    {
+      "id": "prod_M16",
+      "description": "A secure car mount for hands-free navigation.",
+      "imageUrl": "https://images.unsplash.com/photo-1614997926879-c8a6292bc493?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjYXIlMjBtb3VudHxlbnwwfHx8fDE3Njc1Mjk5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car mount"
+    },
+    {
+      "id": "prod_M17",
+      "description": "An adjustable stand for your tablet, perfect for watching movies.",
+      "imageUrl": "https://images.unsplash.com/photo-1601220363009-f7e66d095649?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx0YWJsZXQlMjBzdGFuZHxlbnwwfHx8fDE3Njc1Mjk5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tablet stand"
+    },
+    {
+      "id": "prod_SO14",
+      "description": "A pair of adjustable trekking poles for hiking.",
+      "imageUrl": "https://images.unsplash.com/photo-1635745488837-ffa006eaf9cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0cmVra2luZyUyMHBvbGVzfGVufDB8fHx8MTc2NzUyOTk4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "trekking poles"
+    },
+    {
+      "id": "prod_SO15",
+      "description": "A safe and stylish helmet for cycling.",
+      "imageUrl": "https://images.unsplash.com/photo-1741993806680-8951fecb588f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmljeWNsZSUyMGhlbG1ldHxlbnwwfHx8fDE3Njc1Mjk5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bicycle helmet"
+    },
+    {
+      "id": "prod_SO16",
+      "description": "Anti-fog and UV protection swim goggles.",
+      "imageUrl": "https://images.unsplash.com/photo-1600965962102-9d260a71890d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzd2ltJTIwZ29nZ2xlc3xlbnwwfHx8fDE3Njc1Mjk5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "swim goggles"
+    },
+    {
+      "id": "prod_SO17",
+      "description": "An official size and weight volleyball for beach or court.",
+      "imageUrl": "https://images.unsplash.com/photo-1588492069485-d05b56b2831d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2b2xsZXliYWxsfGVufDB8fHx8MTc2NzUyOTk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "volleyball"
+    },
+    {
+      "id": "prod_SO18",
+      "description": "A complete skateboard for beginners and intermediate riders.",
+      "imageUrl": "https://images.unsplash.com/photo-1597769906792-4b2f9a3403a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2thdGVib2FyZHxlbnwwfHx8fDE3Njc1Mjk5ODN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "skateboard"
+    },
+    {
+      "id": "prod_A12",
+      "description": "A steam iron with a non-stick soleplate.",
+      "imageUrl": "https://images.unsplash.com/photo-1652198709340-9ff0b4c6ea5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdGVhbSUyMGlyb258ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "steam iron"
+    },
+    {
+      "id": "prod_A13",
+      "description": "A portable HD projector for home entertainment.",
+      "imageUrl": "https://images.unsplash.com/photo-1528395874238-34ebe249b3f2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9qZWN0b3J8ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "projector"
+    },
+    {
+      "id": "prod_A14",
+      "description": "A 12-place setting dishwasher for modern kitchens.",
+      "imageUrl": "https://images.unsplash.com/photo-1589109807644-924edf14ee09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkaXNod2FzaGVyfGVufDB8fHx8MTc2NzUyOTk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dishwasher"
+    },
+    {
+      "id": "prod_A15",
+      "description": "A 2-slice pop-up toaster with browning control.",
+      "imageUrl": "https://images.unsplash.com/photo-1655354438845-561bc349a1a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0b2FzdGVyfGVufDB8fHx8MTc2NzUyOTk4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "toaster"
+    },
+    {
+      "id": "prod_A16",
+      "description": "A 750W mixer grinder with 3 stainless steel jars.",
+      "imageUrl": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaXhlciUyMGdyaW5kZXJ8ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mixer grinder"
+    },
+    {
+      "id": "prod_B15",
+      "description": "A shocking psychological thriller by Alex Michaelides.",
+      "imageUrl": "https://images.unsplash.com/photo-1616830333574-aae6cdd0570a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0aHJpbGxlciUyMG5vdmVsfGVufDB8fHx8MTc2NzUyOTk4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "thriller novel"
+    },
+    {
+      "id": "prod_B16",
+      "description": "An unforgettable memoir about a young girl who, kept out of school, leaves her survivalist family and goes on to earn a PhD from Cambridge University.",
+      "imageUrl": "https://images.unsplash.com/photo-1630752336009-75c3657223a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtZW1vaXJ8ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "memoir"
+    },
+    {
+      "id": "prod_B17",
+      "description": "The first book in Frank Herbert's epic science fiction series.",
+      "imageUrl": "https://images.unsplash.com/photo-1737932761590-5fef948e406a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxzY2ktZmklMjBub3ZlbHxlbnwwfHx8fDE3Njc1Mjk5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sci-fi novel"
+    },
+    {
+      "id": "prod_B18",
+      "description": "How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses by Eric Ries.",
+      "imageUrl": "https://images.unsplash.com/photo-1553484771-371a605b060b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGJvb2t8ZW58MHx8fHwxNzY3NTI5OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business book"
+    },
+    {
+      "id": "prod_B19",
+      "description": "A Practical Guide to Personal Freedom by Don Miguel Ruiz.",
+      "imageUrl": "https://images.unsplash.com/photo-1585970215807-a1051a567820?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzcGlyaXR1YWwlMjBib29rfGVufDB8fHx8MTc2NzUyOTk4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spiritual book"
+    },
+    {
+      "id": "prod_T15",
+      "description": "A set of colorful modeling clay with tools.",
+      "imageUrl": "https://images.unsplash.com/photo-1758522277384-cd1af73f271f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2RlbGluZyUyMGNsYXl8ZW58MHx8fHwxNzY3NDkxMjMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modeling clay"
+    },
+    {
+      "id": "prod_T16",
+      "description": "A high-quality wooden chess board game set.",
+      "imageUrl": "https://images.unsplash.com/photo-1705043694763-978b6e1bff6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjaGVzcyUyMHNldHxlbnwwfHx8fDE3Njc1Mjk5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chess set"
+    },
+    {
+      "id": "prod_T17",
+      "description": "A safe foam dart blaster gun for kids.",
+      "imageUrl": "https://images.unsplash.com/photo-1594950981383-6eb659d18fbf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0b3klMjBndW58ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "toy gun"
+    },
+    {
+      "id": "prod_T18",
+      "description": "A realistic baby doll with accessories.",
+      "imageUrl": "https://images.unsplash.com/photo-1588619371180-ac255c264887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiYWJ5JTIwZG9sbHxlbnwwfHx8fDE3Njc0NTU1NzF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "baby doll"
+    },
+    {
+      "id": "prod_T19",
+      "description": "A classic colorful stacking rings toy for toddlers.",
+      "imageUrl": "https://images.unsplash.com/photo-1600368544663-05493ab49549?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzdGFja2luZyUyMHJpbmdzfGVufDB8fHx8MTc2NzQ0MzQzNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stacking rings"
+    },
+    {
+      "id": "prod_BPC14",
+      "description": "A full-coverage foundation with a matte finish.",
+      "imageUrl": "https://images.unsplash.com/photo-1546951400-c106ca5fc813?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxmb3VuZGF0aW9uJTIwbWFrZXVwfGVufDB8fHx8MTc2NzUxOTA0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "foundation makeup"
+    },
+    {
+      "id": "prod_BPC15",
+      "description": "A ceramic hair straightener for sleek and shiny hair.",
+      "imageUrl": "https://images.unsplash.com/photo-1713180759175-f32b30adb766?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYWlyJTIwc3RyYWlnaHRlbmVyfGVufDB8fHx8MTc2NzUyOTk4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hair straightener"
+    },
+    {
+      "id": "prod_BPC16",
+      "description": "A set of 6 colorful and fragrant bath bombs.",
+      "imageUrl": "https://images.unsplash.com/photo-1637675416143-7b11da3fc2c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxiYXRoJTIwYm9tYnN8ZW58MHx8fHwxNzY3NTIxNTI3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bath bombs"
+    },
+    {
+      "id": "prod_BPC17",
+      "description": "A waterproof liquid eyeliner for a precise, dramatic look.",
+      "imageUrl": "https://images.unsplash.com/photo-1649950499670-afc8bb4c02d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZXllbGluZXJ8ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "eyeliner"
+    },
+    {
+      "id": "prod_BPC18",
+      "description": "A long-lasting floral perfume for women.",
+      "imageUrl": "https://images.unsplash.com/photo-1608721279136-cd41b752fa41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwZXJmdW1lJTIwYm90dGxlfGVufDB8fHx8MTc2NzQ1MTMyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "perfume bottle"
+    },
+    {
+      "id": "prod_G15",
+      "description": "A 200g pack of fresh coriander powder.",
+      "imageUrl": "https://images.unsplash.com/photo-1675001856781-d4a6ed1a8f7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb3JpYW5kZXIlMjBwb3dkZXJ8ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coriander powder"
+    },
+    {
+      "id": "prod_G16",
+      "description": "A family pack of 4 instant noodles.",
+      "imageUrl": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnN0YW50JTIwbm9vZGxlc3xlbnwwfHx8fDE3Njc1Mjk5ODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "instant noodles"
+    },
+    {
+      "id": "prod_G17",
+      "description": "A 500g box of corn flakes breakfast cereal.",
+      "imageUrl": "https://images.unsplash.com/photo-1586770974441-93360f202c43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxicmVha2Zhc3QlMjBjZXJlYWx8ZW58MHx8fHwxNzY3NTI5OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "breakfast cereal"
+    },
+    {
+      "id": "prod_G18",
+      "description": "A fresh loaf of whole wheat bread.",
+      "imageUrl": "https://images.unsplash.com/photo-1565181917578-a87c12e04ff7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3aGVhdCUyMGJyZWFkfGVufDB8fHx8MTc2NzQ1OTY4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wheat bread"
+    },
+    {
+      "id": "prod_G19",
+      "description": "A 1L carton of full-cream fresh milk.",
+      "imageUrl": "https://images.unsplash.com/photo-1576186726115-4d51596775d1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtaWxrJTIwY2FydG9ufGVufDB8fHx8MTc2NzQ3MjI4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "milk carton"
+    }
+  ]
+}

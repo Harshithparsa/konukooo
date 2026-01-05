@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///home/user/studio/src/app/profile/pan/page.tsx"],"sourcesContent":["'use client';\n\nimport { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\";\n\nexport default function PanCardPage() {\n    return (\n        <Card>\n            <CardHeader>\n                <CardTitle>PAN Card Information</CardTitle>\n            </CardHeader>\n            <CardContent>\n                <p className=\"text-muted-foreground\">You have not added your PAN card information yet.</p>\n                {/* Placeholder for adding PAN info */}\n            </CardContent>\n        </Card>\n    )\n}\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IACpB,qBACI,6LAAC,2IAAI;;0BACD,6LAAC,iJAAU;0BACP,cAAA,6LAAC,gJAAS;8BAAC;;;;;;;;;;;0BAEf,6LAAC,kJAAW;0BACR,cAAA,6LAAC;oBAAE,WAAU;8BAAwB;;;;;;;;;;;;;;;;;AAKrD;KAZwB","debugId":null}}]
+}

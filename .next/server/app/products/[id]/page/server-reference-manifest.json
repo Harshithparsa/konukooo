@@ -1,0 +1,35 @@
+{
+  "node": {
+    "4030ef9fe85a42185fc294e0c5c705900451877842": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/shopping-assistant.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/ai/flows/related-product-recommendations.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "shoppingAssistant",
+          "filename": "src/ai/flows/shopping-assistant.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "exportedName": "shoppingAssistant",
+      "filename": "src/ai/flows/shopping-assistant.ts"
+    },
+    "40c58d2a810b4bae9de1c638e556a162ea665edf24": {
+      "workers": {
+        "app/products/[id]/page": {
+          "moduleId": "[project]/.next-internal/server/app/products/[id]/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/shopping-assistant.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/ai/flows/related-product-recommendations.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "getRelatedProducts",
+          "filename": "src/ai/flows/related-product-recommendations.ts"
+        }
+      },
+      "layer": {
+        "app/products/[id]/page": "action-browser"
+      },
+      "exportedName": "getRelatedProducts",
+      "filename": "src/ai/flows/related-product-recommendations.ts"
+    }
+  },
+  "edge": {}
+}

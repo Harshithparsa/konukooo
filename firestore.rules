@@ -1,0 +1,268 @@
+/**
+ * @file firestore.rules
+ * @description Security rules for the ShopSphere e-commerce application.
+ *
+ * @section Core Philosophy
+ * This ruleset enforces a strict user-ownership model combined with role-based access control for administrative tasks.
+ * The primary goal is to ensure that users can only access and manage their own data, while a select group of administrators
+ * can manage shared, public data like the product catalog.
+ *
+ * @section Data Structure
+ * The data is structured to isolate user-specific information, such as profiles, carts, and orders, under a top-level
+ * `/users/{userId}` path. This path-based ownership is fundamental to the security model. Publicly readable data,
+ * like `/products`, resides at the top level. A special `/roles_admin` collection is used to grant administrative privileges.
+ *
+ * @section Key Security Decisions
+ * - User data is private: All collections under `/users/{userId}` are accessible only to the authenticated user matching that `userId`.
+ * - No user listing: It is not possible for any user to list all documents in the `/users` collection.
+ * - Public product catalog: The `/products` collection is world-readable, allowing anonymous users to browse items.
+ * - Admin-only product management: Only users designated as admins in the `/roles_admin` collection can create, update, or delete products.
+ * - Server-managed roles: The `/roles_admin` collection is not writable by any client to prevent self-privilege-escalation.
+ *
+ * @section Denormalization for Authorization
+ * To ensure fast and simple authorization checks, this ruleset relies on denormalization:
+ * - Path-based ownership: The user's UID (`userId`) is part of the document path for all private data, avoiding the need for costly `get` calls to check ownership.
+ * - Role-based lookups: Admin status is determined by checking for the existence of a document in `/roles_admin/{uid}`, which is a highly efficient operation.
+ * - Relational integrity: On creation, documents in user subcollections (like carts and orders) must contain a `userId` field that matches the `userId` from the path, ensuring data consistency.
+ *
+ * @section Structural Segregation
+ * The ruleset leverages separate top-level collections for data with different access patterns.
+ * - `/users/{userId}`: Private, user-owned data.
+ * - `/products`: Publicly readable data with restricted writes.
+ * This separation simplifies rules and makes list operations more secure and performant.
+ */
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // -------------------------------------------------------------------------
+    // Helper Functions
+    // -------------------------------------------------------------------------
+
+    /**
+     * Checks if the user is authenticated.
+     */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /**
+     * Checks if the authenticated user's UID matches the provided userId.
+     * This is the primary function for validating ownership of a resource.
+     */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    /**
+     * Combines an ownership check with a check that the resource already exists.
+     * CRITICAL for preventing modification of non-existent documents.
+     */
+    function isExistingOwner(userId) {
+      return isOwner(userId) && resource != null;
+    }
+
+    /**
+     * Checks if the user has an admin role.
+     * Admin status is granted by the existence of a document in the /roles_admin collection.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/roles_admin/$(request.auth.uid));
+    }
+
+    // -------------------------------------------------------------------------
+    // Data Validation Helper Functions (Prototyping Mode)
+    // - These functions validate only fields essential for authorization and
+    //   relational integrity, not the full data shape.
+    // -------------------------------------------------------------------------
+
+    /**
+     * Validates that a new User document's internal ID matches the document ID.
+     */
+    function isNewUserDataValid(userId) {
+      return request.resource.data.id == userId;
+    }
+
+    /**
+     * Enforces immutability of the User document's ID on update.
+     */
+    function isExistingUserDataValid() {
+      return request.resource.data.id == resource.data.id;
+    }
+
+    /**
+     * Validates that a new Cart document belongs to the user in the path.
+     */
+    function isNewCartDataValid(userId) {
+      return request.resource.data.userId == userId;
+    }
+
+    /**
+     * Enforces immutability of the Cart's owner ID on update.
+     */
+    function isExistingCartDataValid() {
+      return request.resource.data.userId == resource.data.userId;
+    }
+
+    /**
+     * Validates that a new CartItem document belongs to the cart in the path.
+     */
+    function isNewCartItemDataValid(cartId) {
+      return request.resource.data.cartId == cartId;
+    }
+
+    /**
+     * Enforces immutability of the CartItem's parent cart ID on update.
+     */
+    function isExistingCartItemDataValid() {
+      return request.resource.data.cartId == resource.data.cartId;
+    }
+    
+    /**
+     * Validates that a new Order document belongs to the user in the path.
+     */
+    function isNewOrderDataValid(userId) {
+      return request.resource.data.userId == userId;
+    }
+
+    /**
+     * Enforces immutability of the Order's owner ID on update.
+     */
+    function isExistingOrderDataValid() {
+      return request.resource.data.userId == resource.data.userId;
+    }
+
+    /**
+     * Validates that a new OrderItem document belongs to the order in the path.
+     */
+    function isNewOrderItemDataValid(orderId) {
+      return request.resource.data.orderId == orderId;
+    }
+
+    /**
+     * Enforces immutability of the OrderItem's parent order ID on update.
+     */
+    function isExistingOrderItemDataValid() {
+      return request.resource.data.orderId == resource.data.orderId;
+    }
+
+    /**
+     * Validates that a new Address document has all the required fields.
+     * This is a light validation for prototyping.
+     */
+    function isAddressDataValid() {
+      let data = request.resource.data;
+      return data.name is string &&
+             data.mobileNumber is string &&
+             data.pincode is string &&
+             data.address is string &&
+             data.city is string &&
+             data.state is string;
+    }
+
+
+    // -------------------------------------------------------------------------
+    // Collection Rules
+    // -------------------------------------------------------------------------
+
+    /**
+     * @description Manages user profile documents.
+     * @path /users/{userId}
+     * @allow (create) An authenticated user creating their own profile document with a matching ID. `auth.uid: 'user_abc'`, `path: /users/user_abc`
+     * @deny (get) An authenticated user trying to read another user's profile. `auth.uid: 'user_abc'`, `path: /users/user_xyz`
+     * @principle Restricts access to a user's own data tree and enforces self-creation.
+     */
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow list: if isOwner(userId);
+      allow create: if isOwner(userId) && isNewUserDataValid(userId);
+      allow update: if isExistingOwner(userId) && isExistingUserDataValid();
+      allow delete: if isExistingOwner(userId);
+
+      /**
+       * @description Manages a user's shopping carts.
+       * @path /users/{userId}/carts/{cartId}
+       */
+      match /carts/{cartId} {
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId) && isNewCartDataValid(userId);
+        allow update: if isExistingOwner(userId) && isExistingCartDataValid();
+        allow delete: if isExistingOwner(userId);
+
+        /**
+         * @description Manages items within a user's shopping cart.
+         * @path /users/{userId}/carts/{cartId}/cartItems/{cartItemId}
+         */
+        match /cartItems/{cartItemId} {
+          allow get: if isOwner(userId);
+          allow list: if isOwner(userId);
+          allow create: if isOwner(userId) && isNewCartItemDataValid(cartId);
+          allow update: if isExistingOwner(userId) && isExistingCartItemDataValid();
+          allow delete: if isExistingOwner(userId);
+        }
+      }
+      
+      /**
+       * @description Manages user orders.
+       * @path /users/{userId}/orders/{orderId}
+       */
+      match /orders/{orderId} {
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        allow create: if isOwner(userId) && isNewOrderDataValid(userId);
+        allow update: if isExistingOwner(userId) && isExistingOrderDataValid();
+        allow delete: if isExistingOwner(userId);
+
+        /**
+         * @description Manages items within a specific user order.
+         * @path /users/{userId}/orders/{orderId}/orderItems/{orderItemId}
+         */
+        match /orderItems/{orderItemId} {
+          allow get: if isOwner(userId);
+          allow list: if isOwner(userId);
+          allow create: if isOwner(userId) && isNewOrderItemDataValid(orderId);
+          allow update: if isExistingOwner(userId) && isExistingOrderItemDataValid();
+          allow delete: if isExistingOwner(userId);
+        }
+      }
+
+      /**
+       * @description Manages a user's shipping addresses.
+       * @path /users/{userId}/addresses/{addressId}
+       * @allow (create, list, delete) An authenticated user managing their own addresses. `auth.uid: 'user_abc'`, `path: /users/user_abc/addresses/...`
+       * @deny (update) An authenticated user trying to modify another user's address. `auth.uid: 'user_abc'`, `path: /users/user_xyz/addresses/...`
+       * @principle Ensures users can only manage their own list of shipping addresses.
+       */
+      match /addresses/{addressId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    /**
+     * @description Manages public product listings.
+     * @path /products/{productId}
+     * @allow (get) Any user, including anonymous ones, viewing a product. `auth: null`, `path: /products/prod_123`
+     * @deny (create) A regular, non-admin user trying to add a new product. `auth.uid: 'user_abc'`, `path: /products/prod_new`
+     * @principle Implements a "Public Read with Admin-Only Writes" pattern for the product catalog.
+     */
+    match /products/{productId} {
+      allow get: if true;
+      allow list: if true;
+      allow create: if isAdmin();
+      allow update: if isAdmin() && resource != null;
+      allow delete: if isAdmin() && resource != null;
+    }
+
+    /**
+     * @description Manages admin user roles. This collection is read by rules but should not be manipulated by any client.
+     * @path /roles_admin/{uid}
+     * @allow (none) No client-side operations are permitted.
+     * @deny (create) Any user trying to make themselves an admin. `auth.uid: 'user_abc'`, `path: /roles_admin/user_abc`
+     * @principle Prevents client-side privilege escalation. Admin roles must be set via a trusted server environment or the Firebase Console.
+     */
+    match /roles_admin/{uid} {
+      allow read, write: if false;
+    }
+  }
+}

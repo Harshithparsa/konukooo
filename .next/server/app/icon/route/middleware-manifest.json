@@ -1,0 +1,60 @@
+{
+  "sorted_middleware": [
+    "/icon/route"
+  ],
+  "middleware": {},
+  "instrumentation": null,
+  "functions": {
+    "/icon/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/server-reference-manifest.js",
+        "server/app/icon/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_icon_route_actions_6c46f2f4.js",
+        "server/edge/chunks/turbopack-_next-internal_server_app_icon_route_actions_7a96774c.js",
+        "server/edge/chunks/node_modules_next_dist_esm_1f6c464f._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_react-server-dom-turbopack_1d71ac1e._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_2e6cd666._.js",
+        "server/edge/chunks/node_modules_next_dist_7bea040f._.js",
+        "server/edge/chunks/edge-wrapper_98c2e09e.js",
+        "server/edge/chunks/node_modules_@opentelemetry_api_build_esm_5713bd62._.js",
+        "server/edge/chunks/node_modules_lucide-react_dist_esm_5acd0e03._.js",
+        "server/edge/chunks/[root-of-the-server]__bdb9cc89._.js",
+        "server/edge/chunks/turbopack-edge-wrapper_7bd863b0.js"
+      ],
+      "name": "app/icon/route",
+      "page": "/icon/route",
+      "matchers": [
+        {
+          "regexp": "^/icon(?:/)?$",
+          "originalSource": "/icon"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "zV47vnR9pD79l63RWpb2oWL5TdmainUzlYMLvceymVo=",
+        "__NEXT_PREVIEW_MODE_ID": "6d2471b0d7bde2a9552ac94a6311067f",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "8ab9183a60d53a41c27bd1bb777584aed122a403cff8a6995eff7c1da8c4ac85",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "ed23487fe57ee76e2b1d160a9f57d7d26827855c4a0b3cabccd2eb63e107b2bc"
+      }
+    }
+  }
+}
